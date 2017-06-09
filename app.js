@@ -22256,9 +22256,11 @@ window.App = {
     status.innerHTML = message;
   },
 
+
   refreshBalance: function() {
     var self = this;
     var daniel;
+
     Daniel.deployed().then(function(instance) {
       daniel = instance;
       return daniel.getLength.call();
@@ -22266,14 +22268,9 @@ window.App = {
       var balance_element = document.getElementById("num");
       balance_element.innerHTML = "<small>" + value.valueOf() + "</small>";
     }).catch(function(e) {
-      console.log(e);
       self.setStatus("Error getting command num; see log.");
     });
-  },
 
-  getLength: function() {
-    var self = this;
-    var daniel;
     Daniel.deployed().then(function(instance) {
       daniel = instance;
       return daniel.getLastCommand.call();
@@ -22281,7 +22278,6 @@ window.App = {
       var balance_element = document.getElementById("balance");
       balance_element.innerHTML = "<small>" + value.valueOf() + "</small>";
     }).catch(function(e) {
-      console.log(e);
       self.setStatus("Error getting balance; see log.");
     });
   },
