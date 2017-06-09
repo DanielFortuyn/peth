@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Peth</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <script src="./app.js"></script>
+</head>
+<body>
+  <h1>Ethereum</h1>
+  <h2>pokemon</h2>
+  <hr />
+  <span id="status"></span><br /><br />
+  <h3>Mostest recentes command <span id="num"></span> was <span id="balance"></span></h3>
+  <br>
+  <span class="hint"><strong>Hint:</strong> open the browser developer console to view any errors and warnings.</span>
+  <br/><br/><br/>
+<!--
+  <script src= "http://player.twitch.tv/js/embed/v1.js"></script>
+  <div id="twitsPlyr"></div>
+  <script type="text/javascript">
+  	var options = {
+  		width: 1200,
+  		height: 800,
+   		channel: "gnirtsmodnar",
+  	};
+  	var player = new Twitch.Player("twitsPlyr", options);
+  	player.setVolume(0.5);
+  </script> -->
+  <div id='leftbuttons'>
+  <button id="send" onclick="App.sendCommand('a')">A</button>
+  <button id="send" onclick="App.sendCommand('b')">B</button>
+  <button id="send" onclick="App.sendCommand('s')">Start</button>
+  <button id="send" onclick="App.sendCommand('x')">Select</button>
+</div>
+<div id="rightbuttons">
+  <button id="send" onclick="App.sendCommand('u')">&uarr;</button><br />
+  <button id="send" onclick="App.sendCommand('l')">&larr;</button>
+  <button id="send" onclick="App.sendCommand('d')">&darr;</button>
+  <button id="send" onclick="App.sendCommand('r')">&rarr;</button>
+</div>
+
+</body>
+</html>
